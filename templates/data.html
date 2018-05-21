@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename ='css/data.css') }}">
+	<title>Crypto currency data</title>
+</head>
+<body>
+	<h1>Crypto currency data</h1>
+	<div id ="left_col">
+		<h3>Get the currency details WITHOUT the exchange</h3>
+		<form action="/result" method="POST">
+			<label>Symbol : <select name="symbol"></label>
+				<option disabled selected value> -- select an option -- </option>
+				<option value="BTC">BTC</option>
+				<option value="ETH">ETH</option>
+				<option value="XRP">XRP</option>
+				<option value="BCH">BCH</option>
+				<option value="LTC">LTC</option>
+				<option value="ADA">ADA</option>
+				<option value="XLM">XLM</option>
+				<option value="MIOTA">MIOTA</option>
+				<option value="NEO">NEO</option>
+				<option value="XMR">XMR</option>
+				<option value="DASH">DASH</option>
+				<option value="XEM">XEM</option>
+				<option value="ETC">ETC</option>
+				<option value="QTUM">QTUM</option>
+				<option value="LSK">LSK</option>
+				<option value="BTG">BTG</option>
+				<option value="XVG">XVG</option>
+				<option value="ZEC">ZEC</option>
+				<option value="NANO">NANO</option>
+				<option value="SC">SC</option>
+			</select>
+			<input type="submit" name="submit" value="Get Data"><br>
+			<label>Comparison Symbol : </label><br>
+			<div><input type="checkbox" name="check" value="USD">USD</div>
+			<div><input type="checkbox" name="check" value="EUR">EUR</div>
+			<div><input type="checkbox" name="check" value="BTC">BTC</div>
+			<div><input type="checkbox" name="check" value="ETH">ETH</div>
+			<div><input type="checkbox" name="check" value="LTC">LTC</div>
+			<div><input type="checkbox" name="check" value="ZEC">ZEC</div>
+			<div><input type="checkbox" name="check" value="DASH">DASH</div>
+			<div><input type="checkbox" name="check" value="XRP">XRP</div>
+			<div><input type="checkbox" name="check" value="XMR">XMR</div>
+			<div><input type="checkbox" name="check" value="BCH">BCH</div>
+			<div><input type="checkbox" name="check" value="ADA">ADA</div>
+			<div><input type="checkbox" name="check" value="XLM">XLM</div>
+			<div><input type="checkbox" name="check" value="MIOTA">MIOTA</div>
+			<div><input type="checkbox" name="check" value="NEO">NEO</div>
+			<div><input type="checkbox" name="check" value="XEM">XEM</div>
+			<div><input type="checkbox" name="check" value="ETC">ETC</div>
+			<div><input type="checkbox" name="check" value="QTUM">QTUM</div>
+			<div><input type="checkbox" name="check" value="LSK">LSK</div>
+			<div><input type="checkbox" name="check" value="BTG">BTG</div>
+			<div><input type="checkbox" name="check" value="XVG">XVG</div>
+			<div><input type="checkbox" name="check" value="NANO">NANO</div>
+			<div><input type="checkbox" name="check" value="SC">SC</div>
+				
+		</form>
+	</div>
+	<div id="right_col">
+		<h3>Get the currency details WITH the exchange</h3>
+		<form action="/data" method="POST">
+			<label>Symbol : <select name="symbol"></label>
+				<option disabled selected value> -- select an option -- </option>
+				<option value="BTC">BTC</option>
+				<option value="ETH">ETH</option>
+				<option value="XRP">XRP</option>
+				<option value="BCH">BCH</option>
+				<option value="LTC">LTC</option>
+				<option value="ADA">ADA</option>
+				<option value="XLM">XLM</option>
+				<option value="MIOTA">MIOTA</option>
+				<option value="NEO">NEO</option>
+				<option value="XMR">XMR</option>
+				<option value="DASH">DASH</option>
+				<option value="XEM">XEM</option>
+				<option value="ETC">ETC</option>
+				<option value="QTUM">QTUM</option>
+				<option value="LSK">LSK</option>
+				<option value="BTG">BTG</option>
+				<option value="XVG">XVG</option>
+				<option value="ZEC">ZEC</option>
+				<option value="NANO">NANO</option>
+				<option value="SC">SC</option>
+			</select>
+			<input type="submit" name="submit" value="Get Data"><br>
+			<label>Exchange : <select name="exchange"></label>
+				<option disabled selected value> -- select an option -- </option>
+				<option value="coinsquare">Coinsquare</option>
+				<option value="coinbase">Coinbase</option>
+				<option value="kraken">Kraken</option>
+				<option value="cex.io">CEX.IO</option>
+				<option value="shapeshift">ShapeShift</option>
+				<option value="poloniex">Poloniex</option>
+				<option value="bitstamp">Bitstamp</option>
+				<option value="coinmama">CoinMama</option>
+				<option value="bitsquare">Bitsquare</option>
+				<option value="localbitcoin">LocalBitcoin</option>
+				<option value="gemini">Gemini</option>
+			</select><br>
+			<label>Comparison Symbol : </label><br>
+			<div><input type="checkbox" name="check" value="USD">USD</div>
+			<div><input type="checkbox" name="check" value="EUR">EUR</div>
+			<div><input type="checkbox" name="check" value="BTC">BTC</div>
+			<div><input type="checkbox" name="check" value="ETH">ETH</div>
+			<div><input type="checkbox" name="check" value="LTC">LTC</div>
+			<div><input type="checkbox" name="check" value="ZEC">ZEC</div>
+			<div><input type="checkbox" name="check" value="DASH">DASH</div>
+			<div><input type="checkbox" name="check" value="XRP">XRP</div>
+			<div><input type="checkbox" name="check" value="XMR">XMR</div>
+			<div><input type="checkbox" name="check" value="BCH">BCH</div>
+			<div><input type="checkbox" name="check" value="ADA">ADA</div>
+			<div><input type="checkbox" name="check" value="XLM">XLM</div>
+			<div><input type="checkbox" name="check" value="MIOTA">MIOTA</div>
+			<div><input type="checkbox" name="check" value="NEO">NEO</div>
+			<div><input type="checkbox" name="check" value="XEM">XEM</div>
+			<div><input type="checkbox" name="check" value="ETC">ETC</div>
+			<div><input type="checkbox" name="check" value="QTUM">QTUM</div>
+			<div><input type="checkbox" name="check" value="LSK">LSK</div>
+			<div><input type="checkbox" name="check" value="BTG">BTG</div>
+			<div><input type="checkbox" name="check" value="XVG">XVG</div>
+			<div><input type="checkbox" name="check" value="NANO">NANO</div>
+			<div><input type="checkbox" name="check" value="SC">SC</div>	
+		</form>
+	</div>
+	<h3>To get Graph details</h3>
+	<form action="/getdata" method="POST">
+		<label>Cryptocurrency symbol of interest : <select name="int_symbol"></label>
+				<option disabled selected value> -- select an option -- </option>
+				<option value="BTC">BTC</option>
+				<option value="ETH">ETH</option>
+				<option value="XRP">XRP</option>
+				<option value="BCH">BCH</option>
+				<option value="LTC">LTC</option>
+				<option value="ADA">ADA</option>
+				<option value="XLM">XLM</option>
+				<option value="MIOTA">MIOTA</option>
+				<option value="NEO">NEO</option>
+				<option value="XMR">XMR</option>
+				<option value="DASH">DASH</option>
+				<option value="XEM">XEM</option>
+				<option value="ETC">ETC</option>
+				<option value="QTUM">QTUM</option>
+				<option value="LSK">LSK</option>
+				<option value="BTG">BTG</option>
+				<option value="XVG">XVG</option>
+				<option value="ZEC">ZEC</option>
+				<option value="NANO">NANO</option>
+				<option value="SC">SC</option>
+			</select>
+			<label>Currency symbol to convert into : <select name="cov_symbol"></label>
+				<option disabled selected value> -- select an option -- </option>
+				<option value="USD">USD</option>
+				<option value="EUR">EUR</option>
+				<option value="BTC">BTC</option>
+				<option value="ETH">ETH</option>
+				<option value="XRP">XRP</option>
+				<option value="BCH">BCH</option>
+				<option value="LTC">LTC</option>
+				<option value="ADA">ADA</option>
+				<option value="XLM">XLM</option>
+				<option value="MIOTA">MIOTA</option>
+				<option value="NEO">NEO</option>
+				<option value="XMR">XMR</option>
+				<option value="DASH">DASH</option>
+				<option value="XEM">XEM</option>
+				<option value="ETC">ETC</option>
+				<option value="QTUM">QTUM</option>
+				<option value="LSK">LSK</option>
+				<option value="BTG">BTG</option>
+				<option value="XVG">XVG</option>
+				<option value="ZEC">ZEC</option>
+				<option value="NANO">NANO</option>
+				<option value="SC">SC</option>
+			</select>
+		<input type="submit" name="submit" value="Graph data">
+	</form>
+</body>
+</html>

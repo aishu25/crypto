@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename ='css/details.css') }}">
+	<script>
+		function goBack(){
+			window.history.back()
+		}
+	</script>
+</head>
+<body>
+	<h1>Graph Details of {{ interest_symbol }} to {{ convert_symbol }}</h1>
+	
+	<iframe src="" name="iframe_a"></iframe>
+	<a href="data:images/png;base64, {{ plot_url }}" target="iframe_a">Graph Image</a>
+	<button onclick="goBack()">Go Back</button>
+</body>
+</html>

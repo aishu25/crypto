@@ -1,0 +1,34 @@
+body{
+	margin: 20px;
+	padding: 20px;
+	font-family: Comic Sans MS, Helvetica, sans-serif;
+	border: 2px solid black;
+}
+
+input[type=submit]{
+	background-color: blue;
+    color: white;
+    margin: 10px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px;
+}
+
+select {
+	background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+input[type=checkbox]{
+	margin: 10px;
+	display: inline;
+}
+
+#right_col{
+	float: right;
+    margin-top: -860px;
+}

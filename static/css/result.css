@@ -1,0 +1,16 @@
+body{
+	margin: 20px;
+	padding: 20px;
+	font-family: Comic Sans MS, Helvetica, sans-serif;
+	border: 2px solid black;
+}
+
+button{
+	background-color: blue;
+    color: white;
+    margin: 10px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px;
+}
